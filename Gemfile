@@ -18,6 +18,7 @@ group :assets do
   gem 'haml'
   gem 'faker'
   gem 'populator'
+  gem 'gravtastic'
 end
 
 gem 'jquery-rails'

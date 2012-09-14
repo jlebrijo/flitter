@@ -2,8 +2,9 @@ $primary_color: #4b7399
 
 body
   background-color: $primary_color
+  color: #333333
   font:
-    family: Verdana, Helvetica, Arial
+    family: "Helvetica Neue",Arial,sans-serif
     size: 14px
 
 a
@@ -54,6 +55,18 @@ a
       background-color: #f7f7f7
     &.first
       border-top: 1px dashed #d2dada
+    img
+      float: left
+    .flit_message_container
+      float: left
+      margin-left: 10px
+      a
+        font-weight: bold
+        text-decoration: none
+        color: #2275bb
+      .created_at
+        font-size: 12px
+        color: #999
 .error_messages
   width: 400px
   border: 2px solid #cf0000

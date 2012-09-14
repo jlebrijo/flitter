@@ -1,4 +1,8 @@
 class User < ActiveRecord::Base
+  include Gravtastic
+  gravtastic :secure => true,
+              :filetype => :gif,
+              :size => 50
   # new columns need to be added here to be writable through mass assignment
   attr_accessible :username, :email, :password, :password_confirmation
 
