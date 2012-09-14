@@ -14,3 +14,6 @@ Nifty authentication:
 
 Creating Model:
 * rails g model Flit user_id:integer message:string created_at:datetime
+
+Populate fake data in the database with gems populator and faker:
+* rake db:seed

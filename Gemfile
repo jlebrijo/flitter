@@ -16,6 +16,8 @@ group :assets do
   gem 'uglifier'
   gem 'nifty-generators'
   gem 'haml'
+  gem 'faker'
+  gem 'populator'
 end
 
 gem 'jquery-rails'
