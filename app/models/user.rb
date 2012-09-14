@@ -14,7 +14,15 @@ class User < ActiveRecord::Base
   validates_length_of :password, :minimum => 4, :allow_blank => true
   
   has_many :flits, :dependent => :destroy
+  has_many :friendships
+  has_many :friends, :through => :friendships
 
+  def add_friend(friend)
+    friendship = friendships.build(:friend_id => friend.id)
+    if !friendship.save
+      logger.debug "User #{friend.email} already exists in the user's friendship list."
+    end
+  end
   # login can be either username or email address
   def self.authenticate(login, pass)
     user = find_by_username(login) || find_by_email(login)

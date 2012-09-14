@@ -17,3 +17,6 @@ Creating Model:
 
 Populate fake data in the database with gems populator and faker:
 * rake db:seed
+
+Model Friendship:
+* rails g model friendship user_id:integer friend_id:integer

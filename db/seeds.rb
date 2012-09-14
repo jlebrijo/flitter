@@ -18,8 +18,13 @@ User.destroy_all
   user.save
 end
 User.all.each do |user|
+  # Add from 5 to 10 flits
   Flit.populate(5..0) do |flit|
     flit.user_id = user.id
     flit.message = Faker::Lorem.sentence
+  end
+  # Add 3 friends
+  3.times do
+    user.add_friend(User.where('id != :id',{ :id => user.id })[rand(User.count-1)])
   end
 end
