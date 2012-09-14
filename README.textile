@@ -9,3 +9,5 @@ Nifty layout (NOTE:remove all .erb):
 * rails g controller welcome
 
 Nifty authentication:
+* rails g nifty:athentication --haml
+* rake db:migrate
