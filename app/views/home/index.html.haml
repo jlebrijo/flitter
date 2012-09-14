@@ -4,4 +4,8 @@
   = text_area_tag :message
   %br
   = submit_tag "Post"
-
+  
+%ul#flits_list
+  - @flits.each do |flit|
+    %li{:class => ("first" if @flits.first == flit)}
+      #{flit.user.username}: #{flit.message} (#{time_ago_in_words flit.created_at} ago)

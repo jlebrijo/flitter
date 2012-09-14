@@ -23,6 +23,11 @@ class User < ActiveRecord::Base
       logger.debug "User #{friend.email} already exists in the user's friendship list."
     end
   end
+  
+  def all_flits
+    Flit.where("user_id in (:friends, :id)", {:friends => friends.map(&:id), :id => self.id}).order(:created_at)
+  end
+  
   # login can be either username or email address
   def self.authenticate(login, pass)
     user = find_by_username(login) || find_by_email(login)
