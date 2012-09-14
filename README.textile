@@ -11,3 +11,6 @@ Nifty layout (NOTE:remove all .erb):
 Nifty authentication:
 * rails g nifty:athentication --haml
 * rake db:migrate
+
+Creating Model:
+* rails g model Flit user_id:integer message:string created_at:datetime
