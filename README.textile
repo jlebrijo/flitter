@@ -4,3 +4,8 @@ h2. Spect
 
 h2. Contruction
 
+Nifty layout (NOTE:remove all .erb):
+* rails g nifty:layout --haml (NOTE: move public/stylesheets/saas/application saas to assets directory)
+* rails g controller welcome
+
+Nifty authentication:
