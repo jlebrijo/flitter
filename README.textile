@@ -25,3 +25,5 @@ Controller to add Fits:
 * rails g controller Flits
 
 Using Gravtastic to add users avatars related with their emails
+
+Creating 

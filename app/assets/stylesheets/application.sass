@@ -81,6 +81,18 @@ a
       size: 150%
     margin: 0px
     padding: 0px 0px 5px 0px
+    &#form_title
+      float: left
+    &#char_count
+      float: right
+      font
+        weight: bold
+        size: 23px
+      color: #aaa
+      &.almost_overflow
+        color: #5c0002
+      &.overflow
+        color: red !important
   #latest_message
     color: #666
     font-size: 90%
@@ -91,6 +103,8 @@ a
     float: right
     width: 160px
     text-align: right
+    .disabled
+      disabled: true
     
 .error_messages
   width: 400px
