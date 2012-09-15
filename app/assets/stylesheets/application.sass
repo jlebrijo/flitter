@@ -1,7 +1,7 @@
-$primary_color: #4b7399
+$primary_color: #C0DEED
 
 body
-  background-color: $primary_color
+  background: $primary_color url(/assets/bg.png) top repeat-x
   color: #333333
   font:
     family: "Helvetica Neue",Arial,sans-serif
@@ -18,12 +18,20 @@ a
   overflow: hidden
 
 #container
-  width: 75%
-  margin: 0 auto
+  width: 710px
+  margin: 0 auto 25px auto
   background: white
   padding: 20px 40px
-  border: solid 1px black
   margin-top: 20px
+  -moz-border-radius: 6px
+  -webkit-border-radius: 6px
+  border-radius: 6px
+  #main
+    width: 540px
+    float: left
+  #side
+    width: 160px
+    float: right
 
 #flash_notice,
 #flash_error,
