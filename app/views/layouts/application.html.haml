@@ -11,6 +11,16 @@
     = yield(:head)
 
   %body
+    #header
+      #logo
+        = image_tag("logo.png", :alt => "Flitter")
+      #top_links_container
+        = link_to "Home | ", root_path
+        - if current_user
+          = link_to "Log out", logout_path
+        - else
+          = link_to "Log in", login_path
+      .clear
     #container
       #main
         - flash.each do |name, msg|

@@ -8,7 +8,9 @@ body
     size: 14px
 
 a
-  color: blue
+  font-weight: bold
+  text-decoration: none
+  color: #2275bb
   img
     border: none
 
@@ -17,6 +19,22 @@ a
   height: 0
   overflow: hidden
 
+#header
+  width: 900px
+  margin: 0 auto 0 auto
+  #logo
+    width: auto
+    float: left
+  #top_links_container
+    width: auto
+    float: right
+    margin: 130px 55px 0 0
+    background: white
+    padding: 10px
+    -moz-border-radius: 6px
+    -webkit-border-radius: 6px
+    border-radius: 6px 
+   
 #container
   width: 710px
   margin: 0 auto 25px auto
@@ -34,7 +52,7 @@ a
     float: right
     img
       float: left
-      padding-left: 3px
+      padding: 3px 0 0 3px
     .contents
       padding-left: 40px
       color: #333
@@ -82,10 +100,6 @@ a
       float: left
       margin-left: 10px
       width: 450px
-      a
-        font-weight: bold
-        text-decoration: none
-        color: #2275bb
       .created_at
         font-size: 12px
         color: #999

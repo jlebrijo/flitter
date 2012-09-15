@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  before_filter :login_required
+  before_filter :login_required, :only => [:index, :toggle_follow]
   def index
     @flits = current_user.all_flits.reverse
     @last_flit = current_user.flits.last

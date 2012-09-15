@@ -16,4 +16,4 @@
 = render 'flits_list'
 
 - content_for :side do
-  = render 'side_contents'
+  = render :partial => 'side_contents', :locals => {:user => current_user}
