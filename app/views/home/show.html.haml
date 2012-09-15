@@ -2,4 +2,8 @@
 %h1
   = image_tag @user.gravatar_url :align => "top"
   = @user.username
+
+= form_tag toggle_follow_path do
+  = submit_tag ((current_user.is_friend_of @user) ? "Following": "Follow") 
+
 = render 'flits_list'

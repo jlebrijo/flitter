@@ -8,4 +8,16 @@ class HomeController < ApplicationController
     @user = User.find_by_username(params[:username])
     @flits = @user.flits.reverse
   end
+  def toggle_follow
+   
+    @user = User.find_by_username(params[:username])
+    if current_user.is_friend_of(@user)
+      flash[:notice] = "You are no longer following @#{@user.username}"
+      current_user.friends.delete(@user)
+    else
+      flash[:notice] = "You are following @#{@user.username}"
+      current_user.friends << @user
+    end
+    redirect_to timeline_path(@user.username)
+  end
 end

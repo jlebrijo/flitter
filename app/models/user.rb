@@ -28,6 +28,10 @@ class User < ActiveRecord::Base
     end
   end
   
+  def is_friend_of(user)
+    self.friends.include? user
+  end
+  
   def all_flits
     Flit.where("user_id in (:friends, :id)", {:friends => friends.map(&:id), :id => self.id}).order(:created_at)
   end
