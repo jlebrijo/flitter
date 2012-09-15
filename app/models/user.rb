@@ -36,6 +36,11 @@ class User < ActiveRecord::Base
     Flit.where("user_id in (:friends, :id)", {:friends => friends.map(&:id), :id => self.id}).order(:created_at)
   end
   
+  def followers
+    followers_ids = Friendship.where("friend_id = :mine",{:mine => self.id}).map { |f|  f.user_id  }
+    User.where("id in(:followers_ids)",{:followers_ids => followers_ids})
+  end
+  
   # login can be either username or email address
   def self.authenticate(login, pass)
     user = find_by_username(login) || find_by_email(login)

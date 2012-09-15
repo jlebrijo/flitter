@@ -1,0 +1,12 @@
+.my_info_container
+  = image_tag current_user.gravatar_url :size => 30
+  .contents
+    = current_user.username
+    .small
+      = pluralize(current_user.flits.count, "Flit")
+.clear
+.side_content_container
+  %h4= link_to "#{current_user.friends.count} following" 
+  %h4= pluralize(current_user.followers.count, "follower")
+  - current_user.followers.each do |f|
+    = link_to image_tag(f.gravatar_url(:size=>30), :border => 0, :alt => f.username, :title => f.username)
