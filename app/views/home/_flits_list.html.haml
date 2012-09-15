@@ -1,0 +1,10 @@
+%ul#flits_list
+  - @flits.each do |flit|
+    %li{:class => ("first" if @flits.first == flit)}
+      = image_tag flit.user.gravatar_url
+      .flit_message_container
+        = link_to flit.user.username, flit.user.username
+        #{flit.message}
+        .created_at
+          #{time_ago_in_words flit.created_at} ago
+      .clear

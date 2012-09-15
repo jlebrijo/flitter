@@ -1,0 +1,5 @@
+- title "#{@user.username} on twitter"
+%h1
+  = image_tag @user.gravatar_url :align => "top"
+  = @user.username
+= render 'flits_list'
