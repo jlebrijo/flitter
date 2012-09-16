@@ -1,9 +1,11 @@
 - title "#{@user.username} on twitter"
 
 %h1
-  = image_tag @user.gravatar_url :align => "top"
-  = @user.username
-
-- if current_user && (current_user != @user)
-  = form_tag toggle_follow_path do
-    = submit_tag ((current_user.is_friend_of @user) ? "Stop following": "Start follow") 
+  %span
+  = image_tag @user.gravatar_url
+  %span.top
+    = @user.username
+  %span
+    - if current_user && (current_user != @user)
+      = form_tag toggle_follow_path, {:class => "follow_form"} do
+        = submit_tag ((current_user.is_friend_of @user) ? "Unfollow": "Follow") 

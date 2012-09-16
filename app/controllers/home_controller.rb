@@ -18,7 +18,8 @@ class HomeController < ApplicationController
       flash[:notice] = "You are following @#{@user.username}"
       current_user.friends << @user
     end
-    redirect_to timeline_path(@user.username)
+    #redirect_to timeline_path(@user.username)
+    redirect_to :back
   end
   def list_friends
     @user = User.find_by_username(params[:username])
