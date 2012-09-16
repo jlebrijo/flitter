@@ -27,6 +27,5 @@ class HomeController < ApplicationController
   end
   def search
     @user_list = User.find_by_search_query(params[:q])
-    flash[:notice] = "No results found" if @user_list.count == 0
   end
 end

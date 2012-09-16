@@ -4,6 +4,6 @@
   %span
   = image_tag @user.gravatar_url
   %span.top
-    = @user.username
+    = @user.username + " " + what
   %span
     = render :partial => 'toggle_follow_button', :locals => {:user => @user}

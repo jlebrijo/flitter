@@ -3,7 +3,7 @@
   .contents
     = user.username
     .small
-      = pluralize(user.flits.count, "Flit")
+      = link_to pluralize(user.flits.count, "Flit"), timeline_path(user.username)
 .clear
 .side_content_container
   %h4= link_to "#{user.friends.count} following", list_friends_path(user.username)
