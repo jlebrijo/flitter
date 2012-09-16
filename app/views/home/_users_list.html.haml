@@ -1,0 +1,14 @@
+%ul#flits_list
+  - users.each do |f|
+    %li{:class => ("first" if users.first == f)}
+      = image_tag f.gravatar_url
+      .flit_message_container
+        = link_to f.username, timeline_path(f.username)
+        %br
+        - last_status = f.flits.last
+        #latest_message
+          %strong==Latest: 
+          #{last_status.message}
+          #{time_ago_in_words last_status.created_at} ago
+        = render :partial => 'toggle_follow_button', :locals => {:user => f}
+      .clear

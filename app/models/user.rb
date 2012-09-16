@@ -41,6 +41,9 @@ class User < ActiveRecord::Base
     User.where("id in(:followers_ids)",{:followers_ids => followers_ids})
   end
   
+  def self.find_by_search_query(q)
+    User.where("username like :q", { :q => "%#{q}%" })
+  end
   # login can be either username or email address
   def self.authenticate(login, pass)
     user = find_by_username(login) || find_by_email(login)

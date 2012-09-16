@@ -1,6 +1,6 @@
 = render 'user_header'
 
-= render 'friends_list'
+= render :partial => 'users_list', :locals => {:users => @friends}
 
 
 - content_for :side do

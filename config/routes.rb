@@ -15,6 +15,8 @@ Flitter::Application.routes.draw do
   
   resources :flits
 
+  match 'search' => 'home#search', :as => :search
+  
   match ':username' => 'home#show', :as => :timeline
   
   match 'list_friends/:username' => 'home#list_friends', :as => :list_friends

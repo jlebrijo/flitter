@@ -6,6 +6,4 @@
   %span.top
     = @user.username
   %span
-    - if current_user && (current_user != @user)
-      = form_tag toggle_follow_path, {:class => "follow_form"} do
-        = submit_tag ((current_user.is_friend_of @user) ? "Unfollow": "Follow") 
+    = render :partial => 'toggle_follow_button', :locals => {:user => @user}

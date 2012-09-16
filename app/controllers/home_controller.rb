@@ -25,4 +25,7 @@ class HomeController < ApplicationController
     @user = User.find_by_username(params[:username])
     @friends = @user.friends
   end
+  def search
+    @user_list = User.find_by_search_query(params[:q].join)
+  end
 end
