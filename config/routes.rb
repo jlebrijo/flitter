@@ -15,7 +15,9 @@ Flitter::Application.routes.draw do
   
   resources :flits
 
-  match ':username' => 'home#show', :constraints => { :username => /[^\/]*/ }, :as => :timeline
+  match ':username' => 'home#show', :as => :timeline
+  
+  match 'list_friends/:username' => 'home#list_friends', :as => :list_friends
   
   match ':username/toggle_follow' => 'home#toggle_follow', :as => :toggle_follow
   # The priority is based upon order of creation:

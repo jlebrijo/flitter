@@ -11,7 +11,7 @@ require 'populator'
 User.destroy_all
 10.times do
   user = User.new
-  user.username = Faker::Internet.user_name
+  user.username = Faker::Internet.user_name.gsub('.','_')
   user.email = Faker::Internet.email
   user.password = "test"
   user.password_confirmation = "test"

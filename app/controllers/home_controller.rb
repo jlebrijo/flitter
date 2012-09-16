@@ -20,4 +20,8 @@ class HomeController < ApplicationController
     end
     redirect_to timeline_path(@user.username)
   end
+  def list_friends
+    @user = User.find_by_username(params[:username])
+    @friends = @user.friends
+  end
 end
