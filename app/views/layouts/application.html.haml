@@ -15,8 +15,8 @@
       #logo
         = image_tag("logo.png", :alt => "Flitter")
       #top_links_container
-        = form_tag search_path , :method => :get do
-          = text_field 'q', nil, :placeholder => 'Search users ...'
+        %form{ :action => search_path, :method => :get }
+          = text_field_tag 'q', nil , :placeholder => 'Search users ...'
           #search_submit_button= " "
       #top_links_container
         = link_to "Home | ", root_path
