@@ -18,9 +18,9 @@ group :assets do
   gem 'haml'
   gem 'faker'
   gem 'populator'
-  gem 'gravtastic'
 end
 
+gem 'gravtastic'
 gem 'jquery-rails'
 
 # Use unicorn as the web server
