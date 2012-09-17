@@ -6,7 +6,9 @@
       = link_to pluralize(user.flits.count, "Flit"), timeline_path(user.username)
 .clear
 .side_content_container
-  %h4= link_to "#{user.friends.count} following", list_friends_path(user.username)
-  %h4= pluralize(user.followers.count, "follower")
+  %h5= link_to "#{user.friends.count} following", list_friends_path(user.username)
+  %h5
+    = pluralize(user.followers.count, "follower")
+    = ":" unless user.followers.count == 0
   - user.followers.each do |f|
     = link_to image_tag(f.gravatar_url(:size=>30), :border => 0, :alt => f.username, :title => f.username), timeline_path(f.username)

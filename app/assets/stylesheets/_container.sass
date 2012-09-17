@@ -1,5 +1,5 @@
 #container
-  @include rounded
+  +rounded
   width: 710px
   margin: 0 auto 25px auto
   background: white
@@ -8,15 +8,17 @@
   #main
     width: 540px
     float: left
-    .top
-      position: relative
-      top: -25px
+    .header_username
+      margin-left: 10px
+      float: left
+    .header_img
+      float: left
   #side
     width: 160px
     float: right
     img
       float: left
-      padding: 3px 0 0 3px
+      margin: 3px 0 0 3px
     .contents
       padding-left: 40px
       color: #333
@@ -25,10 +27,6 @@
         font:
           size: 12px
           weight: normal
-
-.follow_form
-  float: right
-  padding-right: 20px
 
 #new_flit_form
   width: 520px
@@ -62,7 +60,7 @@
       disabled: true
 #latest_message
   color: #666
-  font-size: 90%
+  font-size: 85%
   padding-top: 3px
   float: left
   width: 360px
@@ -80,6 +78,8 @@
       background-color: #f7f7f7
     &.first
       border-top: 1px dashed #d2dada
+    .btn
+      width: 80px
     img
       float: left
     .flit_message_container
@@ -87,6 +87,6 @@
       margin-left: 10px
       width: 450px
       .created_at
-        font-size: 12px
+        font-size: 85%
         color: #999
         padding-top: 3px

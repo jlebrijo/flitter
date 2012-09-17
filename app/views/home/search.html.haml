@@ -3,5 +3,6 @@
 
 = render :partial => 'users_list', :locals => {:users => @user_list}
 
-- content_for :side do
-  = render :partial => 'side_contents', :locals => {:user => current_user}
+- if current_user
+  - content_for :side do
+    = render :partial => 'side_contents', :locals => {:user => current_user}

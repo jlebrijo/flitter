@@ -5,12 +5,14 @@
   %h3#char_count== 140
   .clear
   = text_area_tag :message
-  #latest_message
-    %strong==Latest: 
-    = @last_flit.message
-    #{time_ago_in_words @last_flit.created_at} ago
+  - if @last_flit
+    #latest_message
+      %strong==Latest: 
+      = @last_flit.message
+      #{time_ago_in_words @last_flit.created_at} ago
   #submit_button_container
-    = submit_tag "Update"
+    %button{:type => "submit", :class => "btn"}
+      = "Update"
   .clear
 
 = render 'flits_list'

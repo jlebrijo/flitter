@@ -1,3 +1,4 @@
 - if current_user && (current_user != user)
   = form_tag toggle_follow_path(:username => user.username), {:class => "follow_form"} do
-    = submit_tag ((current_user.is_friend_of user) ? "Unfollow": "Follow")  
+    %button{:type => "submit", :class => "btn"}
+      = ((current_user.is_friend_of user) ? "Unfollow": "Follow")  

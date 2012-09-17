@@ -1,9 +1,9 @@
 - title "#{@user.username} on twitter"
 
 %h1
-  %span
-  = image_tag @user.gravatar_url
-  %span.top
+  
+  .header_img= image_tag @user.gravatar_url :size => 80
+  .header_username
     = @user.username + " " + what
-  %span
     = render :partial => 'toggle_follow_button', :locals => {:user => @user}
+  .clear

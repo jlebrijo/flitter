@@ -1,32 +1,20 @@
-$primary_color: #C0DEED
+@import "bootstrap"
+@import "mixins"
 
-body
-  background: $primary_color url(/assets/bg.png) top repeat-x
-  color: #333333
-  font:
-    family: "Helvetica Neue",Arial,sans-serif
-    size: 14px
+@import "base"
+@import "container"
 
-a
-  font-weight: bold
-  text-decoration: none
-  color: #2275bb
-  img
-    border: none
 
-.clear
-  clear: both
-  height: 0
-  overflow: hidden
+img
+  +rounded(5px)
 
-@mixin rounded 
-  -moz-border-radius: 6px
-  -webkit-border-radius: 6px
-  border-radius: 6px 
+.flash-alert
+  @extend .alert-error
+.flash-notice
+  @extend .alert-success
   
-@import "header"
-@import "container"   
-@import "head_messages"
+.container
+  width: 790px !important
 
   
 
