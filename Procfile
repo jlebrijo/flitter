@@ -1,1 +1,1 @@
-web: bundle exec rails server thin -p  -e 
+web: bundle exec rails server thin 
