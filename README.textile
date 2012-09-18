@@ -1,6 +1,40 @@
 h1. Just another twitter clone
 
-h2. Spect
+It's deployed at: http://agile-inlet-2420.herokuapp.com/
+
+All standard users has the same passwords: 'test'. You can test this demo: signing up and signini in, postiong tweets, follow people ...
+
+h2. Arquitechture
+
+* Heroku => Posgresql/sqlite3 => Thin
+* Rails3
+* JavaScript => Jquery => CoffeeScript
+* CSS3 => SASS => Bootstrap
+* HTML5 => HAML
+
+h2. Specs
+
+# Heroku: use thin via procfile
+# Heroku server: Adding Postgres database
+# Adapting to Bootstrap (navbar, buttons, messages ...) and Setings form
+# Avoiding utf8 snowman effect in the search url
+# Search users feature
+# Add Follow/Unfollow to my list of frien#s
+# Create friend list for each user
+# Side bar: tweets, following and followers
+# Styling main page: background and aside
+# Follow/Unfollow users
+# Create users timelines
+# Create char counter (jquery & coffescript)
+# Styling the update flit form
+# Use Gravtastic and styling the view
+# Show Flits list (with Sass style)
+# Post flits
+# Add Friendship model and seed
+# Populating fake data into the database
+# nifty authentication
+# nifty:layout with Haml
+
 
 h2. Contruction
 
