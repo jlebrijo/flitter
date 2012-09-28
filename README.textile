@@ -1,6 +1,6 @@
 h1. Just another twitter clone
 
-It's deployed at: http://agile-inlet-2420.herokuapp.com/
+It's deployed at: http://another-twitter-clone.herokuapp.com/
 
 All standard users has the same passwords: 'test'. You can test this demo: signing up and signini in, postiong tweets, follow people ...
 
